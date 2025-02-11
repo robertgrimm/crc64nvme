@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/base64"
 	"fmt"
 	"hash/crc64"
 	"io"
@@ -21,5 +20,5 @@ func main() {
 	}
 
 	sum := crc.Sum(nil)
-	fmt.Println(base64.StdEncoding.EncodeToString(sum))
+	fmt.Printf(string(sum))
 }
